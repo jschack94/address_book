@@ -1,10 +1,12 @@
 import React from "react";
 import "./ContactList.css";
 import { Link } from "react-router-dom";
+import logo from './title.png'; 
 
 let ContactList = () => {
   return (
     <React.Fragment>
+      <section>
       <div className="grid-container">
         <div className="grid-item">
           <h2>All Contacts</h2>
@@ -16,6 +18,62 @@ let ContactList = () => {
           </p>
         </div>
       </div>
+      </section>
+      <div className="styled-container">
+        <div className="styled-card">
+        <img class="fit-picture"
+     src={logo}
+     alt="Grapefruit slice atop a pile of other slices">
+</img>
+
+          <h1>HELLO 1</h1>
+          <p>HOWDYYYYY</p>
+          <div className="styled-button">
+          See Contact
+            </div>
+        </div>
+        <div className="styled-card">
+        <img class="fit-picture"
+     src={logo}
+     alt="Grapefruit slice atop a pile of other slices">
+</img>
+
+          <h1>HELLO 1</h1>
+          <p>HOWDYYYYY</p>
+          <div className="styled-button">
+          See Contact
+            </div>
+        </div>
+        <div className="styled-card">
+        <img class="fit-picture"
+     src={logo}
+     alt="Grapefruit slice atop a pile of other slices">
+</img>
+
+          <h1>HELLO 1</h1>
+          <p>HOWDYYYYY</p>
+          <div className="styled-button">
+          See Contact
+            </div>
+        </div>
+        <div className="styled-card">
+        <img class="fit-picture"
+     src={logo}
+     alt="Grapefruit slice atop a pile of other slices">
+</img>
+
+          <h1>HELLO 1</h1>
+          <p>HOWDYYYYY</p>
+          <div className="styled-button">
+            See Contact
+            </div>
+        </div>
+
+
+      </div>
+      <section>
+
+      </section>
     </React.Fragment>
   );
 };
