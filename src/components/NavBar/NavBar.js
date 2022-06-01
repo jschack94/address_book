@@ -4,10 +4,13 @@ import { Link } from "react-router-dom";
 
 let NavBar = ({ User }) => {
     let welcomeText
+    let settingsText
     if (User.firstName) {
         welcomeText = "Welcome Back" + (User.firstName)
+        settingsText = "Settings"
     } else  {
         welcomeText = ""
+        settingsText = ""
     }
   return (
     <React.Fragment>
@@ -18,7 +21,7 @@ let NavBar = ({ User }) => {
             Contact Manager
           </Link>
         </div>
-        <div className="navbar__item">Settings</div>
+        <div className="navbar__item">{settingsText}</div>
         <div className="navbar__item"> {welcomeText} </div>
       </header>
     </React.Fragment>
