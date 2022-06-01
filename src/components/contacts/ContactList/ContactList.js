@@ -3,7 +3,7 @@ import "./ContactList.css";
 import { Link } from "react-router-dom";
 import logo from './title.png'; 
 
-let ContactList = () => {
+let ContactList = ({User}) => {
   return (
     <React.Fragment>
       <section>

@@ -1,32 +1,50 @@
-import React from 'react';
+import React, { useState } from "react";
 import './App.css';
 import {Routes, Route, Navigate} from 'react-router-dom';
 import NavBar from "./components/NavBar/NavBar";
 import ContactList from "./components/contacts/ContactList/ContactList";
-import AddContact from "./components/contacts/AddContact/AddContact";
-import ViewContact from "./components/contacts/ViewContact/ViewContact";
-import EditContact from "./components/contacts/EditContact/EditContact";
+import LoginForm from "./components/Login/LoginForm";
+
+let App = () => {
+
+
+  const [user, setUser] = useState({ firstName: "", email: "", password: "" });
+  const [error, setError] = useState("");
+
+  const Login = (details) => {
+      
+    if (details.email && details.password ) {
+        setUser({
+            firstName: details.firstName,
+            email: details.email,
+            password: details.email
+        })
+        console.log(user)
+    } else {
+        console.log("Try Again")
+    }
+
 
   
-let App = () => {
+  };
+  
   return (
-    <React.Fragment>
-      <NavBar/>
-      <Routes>
-        <Route path={'/'} element={<Navigate to={'/contacts/list'}/>} />
-        <Route path={'/contacts/list'} element={<ContactList/>} />
-        <Route path={'/contacts/add'} element={<AddContact/>} />
-        <Route path={'/contacts/edit'} element={<EditContact/>} />
-        <Route path={'/contacts/view/:contactId'} element={<ViewContact/>} />
-        <Route path={'/contacts/edit/:contactId'} element={<EditContact/>} />
+   <div>
+      <NavBar User={user}/>
+        <div className="App">
+          {user.email != "" ? (
+            <div className="welcome">
+              <ContactList User={user}/>
+            </div>
+          ) : (
+            <LoginForm Login={Login}/>
+          )}
+        </div>
+        </div>
+      );
+    };
+    
+      
 
-
-
-
-      </Routes>
-
-    </React.Fragment>
-  );
-}
 
 export default App;
