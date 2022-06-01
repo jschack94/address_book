@@ -3,6 +3,12 @@ import "./NavBar.css";
 import { Link } from "react-router-dom";
 
 let NavBar = ({ User }) => {
+    let welcomeText
+    if (User.firstName) {
+        welcomeText = "Welcome Back" + (User.firstName)
+    } else  {
+        welcomeText = ""
+    }
   return (
     <React.Fragment>
       <header className="navbar">
@@ -13,7 +19,7 @@ let NavBar = ({ User }) => {
           </Link>
         </div>
         <div className="navbar__item">Settings</div>
-        <div className="navbar__item">Welcome Back, {User.firstName} </div>
+        <div className="navbar__item"> {welcomeText} </div>
       </header>
     </React.Fragment>
   );
