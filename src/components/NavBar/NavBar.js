@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 let NavBar = ({ User }) => {
     let welcomeText
     let settingsText
-    if (User.firstName) {
-        welcomeText = "Welcome Back" + (User.firstName)
+    if (User.username) {
+        welcomeText = "Welcome Back" + (User.username)
         settingsText = "Settings"
     } else  {
         welcomeText = ""

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 function LoginForm({ Login }) {
   const [details, setDetails] = useState({
-    firstName: "",
+    username: "",
     email: "",
     password: "",
   });
@@ -16,15 +16,16 @@ function LoginForm({ Login }) {
       <div className="form-inner">
         <h2>Login</h2>
         <div className="form-group">
-          <label htmlFor="first">First Name:</label>
+          <label htmlFor="first">Username:</label>
           <input
             type="text"
-            name="first_name"
-            id="first_name"
+            name="username"
+            id="username"
+            required
             onChange={(e) =>
-              setDetails({ ...details, firstName: e.target.value })
+              setDetails({ ...details, username: e.target.value })
             }
-            value={details.firstName}
+            value={details.username}
           />
         </div>
         <div className="form-group">
@@ -33,6 +34,7 @@ function LoginForm({ Login }) {
             type="text"
             name="email"
             id="email"
+            required
             onChange={(e) => setDetails({ ...details, email: e.target.value })}
             value={details.email}
           />
@@ -40,9 +42,10 @@ function LoginForm({ Login }) {
         <div className="form-group">
           <label htmlFor="password">Password:</label>
           <input
-            type="text"
+            type="password"
             name="password"
             id="password"
+            required
             onChange={(e) =>
               setDetails({ ...details, password: e.target.value })
             }

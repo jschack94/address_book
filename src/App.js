@@ -8,14 +8,14 @@ import LoginForm from "./components/Login/LoginForm";
 let App = () => {
 
 
-  const [user, setUser] = useState({ firstName: "", email: "", password: "" });
+  const [user, setUser] = useState({ username: "", email: "", password: "" });
   const [error, setError] = useState("");
 
   const Login = (details) => {
       
     if (details.email && details.password ) {
         setUser({
-            firstName: details.firstName,
+            username: details.username,
             email: details.email,
             password: details.email
         })
