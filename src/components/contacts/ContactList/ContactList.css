@@ -44,7 +44,10 @@
 }
 
 @media only screen and (min-width: 600px) {
-  .mobile-view {display: none}
+  .styled-card {display: none}
+  .mobile-button-view {display:none}
+
+  
 }
 
 

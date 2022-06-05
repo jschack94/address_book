@@ -69,7 +69,7 @@ let ContactList = () => {
                 >
 
                 </img>
-               <div className="regular-view">
+               <div className="mobile-list-view">
                 <ul className="list-group">
                   <li className="list-group-item list-group-item-action">
                     Salutation:
@@ -89,8 +89,11 @@ let ContactList = () => {
                       <b> {contact.lastName}</b>
                     </span>
                   </li>
+                  </ul>
+                  </div>
 
-                 
+                 <div className="regular-view">
+                   <ul className="list-group">
                   <li className="list-group-item list-group-item-action">
                     Company:
                     <span>
@@ -106,7 +109,7 @@ let ContactList = () => {
                   </li>
                 </ul>
                 </div>
-                <div className="mobile-view">
+                <div className="mobile-button-view">
                 <button className="button button-view">
                   <Link
                     to={".contacts/view/:contactId"}
