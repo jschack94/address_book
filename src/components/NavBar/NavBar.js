@@ -3,15 +3,15 @@ import "./NavBar.css";
 import { Link } from "react-router-dom";
 
 let NavBar = ({ User }) => {
-    let welcomeText
-    let settingsText
-    if (User.username) {
-        welcomeText = "Welcome Back" + (User.username)
-        settingsText = "Settings"
-    } else  {
-        welcomeText = ""
-        settingsText = ""
-    }
+  let welcomeText;
+  let settingsText;
+  if (User.username) {
+    welcomeText = "Welcome Back, " + User.username;
+    settingsText = "Settings";
+  } else {
+    welcomeText = "";
+    settingsText = "";
+  }
   return (
     <React.Fragment>
       <header className="navbar">
@@ -21,7 +21,10 @@ let NavBar = ({ User }) => {
             Contact Manager
           </Link>
         </div>
-        <div className="navbar__item">{settingsText}</div>
+        <div className="navbar__item">
+  
+          <Link to={"/settings"} className="plain">{settingsText}</Link>
+        </div>
         <div className="navbar__item"> {welcomeText} </div>
       </header>
     </React.Fragment>

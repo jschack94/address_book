@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import "./LoginForm.css";
+
 
 function LoginForm({ Login }) {
   const [details, setDetails] = useState({
@@ -12,6 +14,7 @@ function LoginForm({ Login }) {
     Login(details);
   };
   return (
+    <div className="login-form">
     <form onSubmit={submitHandler}>
       <div className="form-inner">
         <h2>Login</h2>
@@ -55,6 +58,7 @@ function LoginForm({ Login }) {
         <input type="submit" value="Login" />
       </div>
     </form>
+    </div>
   );
 }
 
