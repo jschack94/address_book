@@ -4,19 +4,28 @@ import { Link } from "react-router-dom";
 
 let ContactList = () => {
   const [contacts, setContacts] = React.useState([
+   
     {
       photo:
-        "https://pixabay.com/get/gae53fe03db8ac5db9c87c52efa14481d5757fea54eb917368fc98da6d6dc1558c39353a5f2ff527335162725dd448165df5047277ee3738da879a2385e882c9127e877a1ac2462e8837449299cc14ff7_640.png",
-      salutation: "Mrs",
-      firstName: "lizzy",
-      lastName: "g",
-      company: "google",
-      phone: "+1 (719) 555-1212",
+        "https://upload.wikimedia.org/wikipedia/en/thumb/3/33/Patrick_Star.svg/1200px-Patrick_Star.svg.png",
+      salutation: "Mr",
+      firstName: "Patrick",
+      lastName: "Star",
+      company: "Apple",
+      phone: "262-893-4343",
     },
-
+    {
+      photo:
+        "https://upload.wikimedia.org/wikipedia/en/thumb/a/a0/Sandy_Cheeks.svg/1200px-Sandy_Cheeks.svg.png",
+      salutation: "Mrs",
+      firstName: "Sandy",
+      lastName: "Cheeks",
+      company: "Apple",
+      phone: "253-545-5454",
+    },
   ]);
 
-  const removeAddress = index => {
+  const removeAddress = (index) => {
     const newAddresses = [...contacts];
     newAddresses.splice(index, 1);
     setContacts(newAddresses);
@@ -56,8 +65,11 @@ let ContactList = () => {
                 <img
                   src={contact.photo}
                   class="fit-picture"
-                  alt="Grapefruit slice atop a pile of other slices"
-                ></img>
+                  alt="Contact Photo"
+                >
+
+                </img>
+               <div className="regular-view">
                 <ul className="list-group">
                   <li className="list-group-item list-group-item-action">
                     Salutation:
@@ -77,6 +89,8 @@ let ContactList = () => {
                       <b> {contact.lastName}</b>
                     </span>
                   </li>
+
+                 
                   <li className="list-group-item list-group-item-action">
                     Company:
                     <span>
@@ -91,6 +105,8 @@ let ContactList = () => {
                     </span>
                   </li>
                 </ul>
+                </div>
+                <div className="mobile-view">
                 <button className="button button-view">
                   <Link
                     to={".contacts/view/:contactId"}
@@ -99,6 +115,7 @@ let ContactList = () => {
                     <i class="fa fa-eye fa-1x"></i>
                   </Link>
                 </button>
+                </div>
                 <button
                   className="button button-trash"
                   onClick={() => removeAddress(index)}
