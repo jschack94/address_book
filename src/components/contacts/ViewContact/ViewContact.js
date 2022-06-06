@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 
 let ViewContact = () => {
+
 return (
 <React.Fragment>
 <section>

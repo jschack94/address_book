@@ -71,6 +71,19 @@
     border-color: #ffc107; 
 }
 
+.add-form {
+  display: flex;
+  justify-content:space-around;
+  
+ 
+}
+
+.icon {
+  margin: auto;
+  width: 15%;
+  display: flex;
+}
+
 
 
 

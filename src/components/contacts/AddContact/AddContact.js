@@ -1,8 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import "./AddContact.css";
 import { Link } from "react-router-dom";
 
-let AddContact = () => {
+let AddContact = ({addContact}) => {
+  const initialFormState = {
+    photo: "",
+    salutation: "",
+    firstname: "",
+    lastName: "",
+    company: "",
+    phone: "",
+  };
+  const [contact, setContact] = useState(initialFormState);
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+
+    setContact({ ...contact, [name]: value });
+  };
+
+  const submitHandler = (event) => {
+    event.preventDefault()
+    addContact(contact)
+    setContact(initialFormState)
+  }
+
   return (
     <React.Fragment>
       <section>
@@ -27,23 +49,55 @@ let AddContact = () => {
               </Link>
             </button>
           </div>
-          <div className="styled-container-add">
-            <form>
-              <input type="text" className="form-control" value="Photo" />
-              <input type="text" className="form-control" value="Salutation" />
-              <input type="text" className="form-control" value="First Name" required />
-              <input type="text" className="form-control" value="Last Name" required />
-              <input type="text" className="form-control" value="Company" />
-              <input type="text" className="form-control" value="Phone Number" required />
-              <div>
-                <input type="submit" value="Update" />
+          <img
+                  src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
+                  class="icon"
+                  alt="Contact Photo"
+                ></img>
+          <div className="add-form">
+        
+          <form onSubmit={submitHandler}>
+            <div className="form-inner">
+              <h2>Create Contact</h2>
+              <div className="form-group">
+                <label htmlFor="photo">Photo:</label>
+                <input type="text" name="photo" id="photo" onChange={handleInputChange}
+            value={contact.photo} required />
               </div>
-            </form>
-          </div>
+              <div className="form-group">
+                <label htmlFor="salutation">Salutation:</label>
+                <input type="text" name="salutation" id="salutation" onChange={handleInputChange}
+            value={contact.salutation} required />
+              </div>
+              <div className="form-group">
+                <label htmlFor="firstname">First Name:</label>
+                <input type="text" name="firstname" id="firstname" onChange={handleInputChange}
+            value={contact.firstname} required />
+              </div>
+              <div className="form-group">
+                <label htmlFor="lastname">Last Name:</label>
+                <input type="text" name="lastname" id="lastname" onChange={handleInputChange}
+            value={contact.lastname} required />
+              </div>
+              <div className="form-group">
+                <label htmlFor="company">Company:</label>
+                <input type="text" name="company" id="company" onChange={handleInputChange}
+            value={contact.company} required />
+              </div>
+              <div className="form-group">
+                <label htmlFor="phone">Phone:</label>
+                <input type="text" name="phone" id="phone" onChange={handleInputChange}
+            value={contact.phone} required />
+              </div>
+              <input type="submit" value="Add Contact" />
+            </div>
+          </form>
+        </div>
         </div>
       </section>
     </React.Fragment>
   );
+  
 };
 
 export default AddContact;

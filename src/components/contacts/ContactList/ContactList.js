@@ -2,31 +2,11 @@ import React from "react";
 import "./ContactList.css";
 import { Link } from "react-router-dom";
 
-let ContactList = () => {
-  const [contacts, setContacts] = React.useState([
-   
-    {
-      photo:
-        "https://upload.wikimedia.org/wikipedia/en/thumb/3/33/Patrick_Star.svg/1200px-Patrick_Star.svg.png",
-      salutation: "Mr",
-      firstName: "Patrick",
-      lastName: "Star",
-      company: "Apple",
-      phone: "262-893-4343",
-    },
-    {
-      photo:
-        "https://upload.wikimedia.org/wikipedia/en/thumb/a/a0/Sandy_Cheeks.svg/1200px-Sandy_Cheeks.svg.png",
-      salutation: "Mrs",
-      firstName: "Sandy",
-      lastName: "Cheeks",
-      company: "Apple",
-      phone: "253-545-5454",
-    },
-  ]);
+let ContactList = ({Contacts, setContacts}) => {
+
 
   const removeAddress = (index) => {
-    const newAddresses = [...contacts];
+    const newAddresses = [...Contacts];
     newAddresses.splice(index, 1);
     setContacts(newAddresses);
   };
@@ -59,7 +39,7 @@ let ContactList = () => {
       </section>
       <React.Fragment>
         <div className="styled-container">
-          {contacts.map((contact, index) => {
+          {Contacts.map((contact, index) => {
             return (
               <div className="styled-card" key={index} index={index}>
                 <img
@@ -112,7 +92,7 @@ let ContactList = () => {
                 <div className="mobile-button-view">
                 <button className="button button-view">
                   <Link
-                    to={".contacts/view/:contactId"}
+                    to={'./contacts/view/contactId'}
                     className="standard-button"
                   >
                     <i class="fa fa-eye fa-1x"></i>
