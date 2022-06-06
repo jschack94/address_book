@@ -17,12 +17,20 @@ const [contacts, setContacts] = React.useState([
       photo:
         "https://upload.wikimedia.org/wikipedia/en/thumb/3/33/Patrick_Star.svg/1200px-Patrick_Star.svg.png",
       salutation: "Mr",
-      firstName: "Patrick",
-      lastName: "Star",
+      firstname: "Patrick",
+      lastname: "Star",
       company: "Apple",
-      numbers: [{type: "Home", number: "262-894-0550", isPrimary:""},{type: "Work", number: "262-894-0630", isPrimary:""}, {type: "Mobile", number: "262-843-4343", isPrimary:""}]
+      numbers: [{type: "Home", number: "262-894-0630", isPrimary:""},{type: "Work", number: "262-894-0630", isPrimary:""}, {type: "Mobile", number: "262-843-4343", isPrimary:""}]
     },
-    
+    {
+      photo:
+        "https://upload.wikimedia.org/wikipedia/en/thumb/a/a0/Sandy_Cheeks.svg/1200px-Sandy_Cheeks.svg.png",
+      salutation: "Mrs",
+      firstname: "Sandy",
+      lastname: "Cheeks",
+      company: "Apple",
+      numbers: [{type: "Home", number: "262-894-0630", isPrimary:""},{type: "Work", number: "262-894-0630", isPrimary:""}, {type: "Mobile", number: "262-843-4343", isPrimary:""}]
+    },
   ]);
 
   const [user, setUser] = useState({ username: "", email: "", password: "" });

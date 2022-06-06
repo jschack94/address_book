@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import "./ContactList.scss";
 import { Link } from "react-router-dom";
 
-let ContactList = ({ Contacts, setContacts }) => {
+let ContactList = ({Contacts, setContacts}) => {
+
   const [isActive, setActive] = useState("false");
 
   const handleToggle = () => {
     setActive(!isActive);
   };
+
 
   const removeAddress = (index) => {
     const newAddresses = [...Contacts];
@@ -50,63 +52,70 @@ let ContactList = ({ Contacts, setContacts }) => {
                   src={contact.photo}
                   class="fit-picture"
                   alt="Contact Photo"
-                ></img>
-                <div className="mobile-list-view">
-                  <ul className="list-group">
-                    <li className="list-group-item list-group-item-action">
-                      Salutation:
-                      <span>
-                        <b> {contact.salutation}</b>
-                      </span>
-                    </li>
-                    <li className="list-group-item list-group-item-action">
-                      First Name:
-                      <span>
-                        <b> {contact.firstName}</b>
-                      </span>
-                    </li>
-                    <li className="list-group-item list-group-item-action">
-                      Last Name:
-                      <span>
-                        <b> {contact.lastName}</b>
-                      </span>
-                    </li>
-                  </ul>
-                </div>
+                >
 
-                <div className={isActive ? "regular-view" : null}>
-                  <ul className="list-group">
-                    <li className="list-group-item list-group-item-action">
-                      Company:
-                      <span>
-                        <b> {contact.company}</b>
-                      </span>
-                    </li>
+                </img>
+               <div className="mobile-list-view">
+                <ul className="list-group">
+                  <li className="list-group-item list-group-item-action">
+                    Salutation:
+                    <span>
+                      <b> {contact.salutation}.</b>
+                    </span>
+                  </li>
+                  <li className="list-group-item list-group-item-action">
+                    First Name:
+                    <span>
+                      <b> {contact.firstname}</b>
+                    </span>
+                  </li>
+                  <li className="list-group-item list-group-item-action">
+                    Last Name:
+                    <span>
+                      <b> {contact.lastname}</b>
+                    </span>
+                  </li>
                   </ul>
+                  </div>
 
+                  <div className={isActive ? "regular-view" : null}>
+                   <ul className="list-group">
+                  <li className="list-group-item list-group-item-action">
+                    Company:
+                    <span>
+                      <b> {contact.company}</b>
+                    </span>
+                  </li>
+                  </ul>
+                  
                   {contact.numbers.map((number) => {
-                    return (
-                      <ul className="list-group">
-                        <div className={number.type === "Home" ? "green" : ""}>
-                          <div
-                            className={number.type === "Mobile" ? "blue" : ""}
-                          >
-                            <div
-                              className={number.type === "Work" ? "red" : ""}
-                            >
-                              <p>{number.type}:</p>
-                              <p>{number.number}</p>
-                            </div>
-                          </div>
-                        </div>
-                      </ul>
-                    );
-                  })}
+                     return (
+                       <ul className="list-group">
+                         <div className={number.type === "Home" ? "green" : ""}>
+                           <div
+                             className={number.type === "Mobile" ? "blue" : ""}
+                           >
+                             <div
+                               className={number.type === "Work" ? "red" : ""}
+                             >
+                               <p>{number.type}:</p>
+                               <p>{number.number}</p>
+                             </div>
+                           </div>
+                         </div>
+                       </ul>
+                     );
+                   })}
                 </div>
                 <div className="mobile-button-view">
-                  <button className="button button-view" onClick={handleToggle}>
+                <button className="button button-view" onClick={handleToggle}>
+                  <Link
+                    to={'./contacts/view/contactId'}
+                    className="standard-button"
+                  >
                     <i class="fa fa-eye fa-1x"></i>
-                  </button>
+                  </Link>
+                </button>
                 </div>
                 <button
                   className="button button-trash"
@@ -119,7 +128,6 @@ let ContactList = ({ Contacts, setContacts }) => {
               </div>
             );
           })}
-          <div></div>
         </div>
       </React.Fragment>
     </React.Fragment>
