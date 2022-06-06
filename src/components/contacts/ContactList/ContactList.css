@@ -45,14 +45,16 @@
 
 @media only screen and (min-width: 600px) {
   .styled-card {display: none}
-  .mobile-button-view {display:none}
+  .mobile-button-view {display: none}
+
+
 
   
 }
 
 
 @media only screen and (max-width: 600px) {
-  .regular-view {display: none}
+  .regular-view {display:none}
 }
 
 

@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import "./AddContact.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-let AddContact = ({addContact}) => {
+let AddContact = ({ addContact }) => {
+  const navigate = useNavigate();
+
   const initialFormState = {
     photo: "",
     salutation: "",
@@ -20,10 +22,13 @@ let AddContact = ({addContact}) => {
   };
 
   const submitHandler = (event) => {
-    event.preventDefault()
-    addContact(contact)
-    setContact(initialFormState)
-  }
+    event.preventDefault();
+    addContact(contact);
+    setContact(initialFormState);
+
+    navigate("/contactList");
+    
+  };
 
   return (
     <React.Fragment>
@@ -50,54 +55,86 @@ let AddContact = ({addContact}) => {
             </button>
           </div>
           <img
-                  src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
-                  class="icon"
-                  alt="Contact Photo"
-                ></img>
+            src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
+            class="icon"
+            alt="Contact Photo"
+          ></img>
           <div className="add-form">
-        
-          <form onSubmit={submitHandler}>
-            <div className="form-inner">
-              <h2>Create Contact</h2>
-              <div className="form-group">
-                <label htmlFor="photo">Photo:</label>
-                <input type="text" name="photo" id="photo" onChange={handleInputChange}
-            value={contact.photo} required />
+            <form onSubmit={submitHandler}>
+              <div className="form-inner">
+                <h2>Create Contact</h2>
+                <div className="form-group">
+                  <label htmlFor="photo">Photo:</label>
+                  <input
+                    type="text"
+                    name="photo"
+                    id="photo"
+                    onChange={handleInputChange}
+                    value={contact.photo}
+                    required
+                  />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="salutation">Salutation:</label>
+                  <input
+                    type="text"
+                    name="salutation"
+                    id="salutation"
+                    onChange={handleInputChange}
+                    value={contact.salutation}
+                  />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="firstname">First Name:</label>
+                  <input
+                    type="text"
+                    name="firstname"
+                    id="firstname"
+                    onChange={handleInputChange}
+                    value={contact.firstname}
+                    required
+                  />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="lastname">Last Name:</label>
+                  <input
+                    type="text"
+                    name="lastname"
+                    id="lastname"
+                    onChange={handleInputChange}
+                    value={contact.lastname}
+                    required
+                  />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="company">Company:</label>
+                  <input
+                    type="text"
+                    name="company"
+                    id="company"
+                    onChange={handleInputChange}
+                    value={contact.company}
+                  />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="phone">Phone:</label>
+                  <input
+                    type="text"
+                    name="phone"
+                    id="phone"
+                    onChange={handleInputChange}
+                    value={contact.phone}
+                    required
+                  />
+                </div>
+                <input type="submit" value="Add Contact" />
               </div>
-              <div className="form-group">
-                <label htmlFor="salutation">Salutation:</label>
-                <input type="text" name="salutation" id="salutation" onChange={handleInputChange}
-            value={contact.salutation} required />
-              </div>
-              <div className="form-group">
-                <label htmlFor="firstname">First Name:</label>
-                <input type="text" name="firstname" id="firstname" onChange={handleInputChange}
-            value={contact.firstname} required />
-              </div>
-              <div className="form-group">
-                <label htmlFor="lastname">Last Name:</label>
-                <input type="text" name="lastname" id="lastname" onChange={handleInputChange}
-            value={contact.lastname} required />
-              </div>
-              <div className="form-group">
-                <label htmlFor="company">Company:</label>
-                <input type="text" name="company" id="company" onChange={handleInputChange}
-            value={contact.company} required />
-              </div>
-              <div className="form-group">
-                <label htmlFor="phone">Phone:</label>
-                <input type="text" name="phone" id="phone" onChange={handleInputChange}
-            value={contact.phone} required />
-              </div>
-              <input type="submit" value="Add Contact" />
-            </div>
-          </form>
-        </div>
+            </form>
+          </div>
         </div>
       </section>
     </React.Fragment>
   );
-  
 };
 
 export default AddContact;
