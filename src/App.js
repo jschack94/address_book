@@ -20,7 +20,7 @@ const [contacts, setContacts] = React.useState([
       firstName: "Patrick",
       lastName: "Star",
       company: "Apple",
-      numbers: [{type: "Work", number: "262-894-0630", isPrimary:""}, {type: "Mobile", number: "262-843-4343", isPrimary:""}]
+      numbers: [{type: "Home", number: "262-894-0550", isPrimary:""},{type: "Work", number: "262-894-0630", isPrimary:""}, {type: "Mobile", number: "262-843-4343", isPrimary:""}]
     },
     
   ]);

@@ -84,15 +84,25 @@ let ContactList = ({ Contacts, setContacts }) => {
                     </li>
                   </ul>
 
-                  {contact.numbers.map(number => {
+                  {contact.numbers.map((number) => {
                     return (
                       <ul className="list-group">
-                        <p>{number.type}:</p>
-                        <p>{number.number}</p>
-                        </ul>
-                    )
+                        <div className={number.type === "Home" ? "green" : ""}>
+                          <div
+                            className={number.type === "Mobile" ? "blue" : ""}
+                          >
+                            <div
+                              className={number.type === "Work" ? "red" : ""}
+                            >
+                              <p>{number.type}:</p>
+                              <p>{number.number}</p>
+                            </div>
+                          </div>
+                        </div>
+                      </ul>
+                    );
                   })}
-                  </div>
+                </div>
                 <div className="mobile-button-view">
                   <button className="button button-view" onClick={handleToggle}>
                     <i class="fa fa-eye fa-1x"></i>
