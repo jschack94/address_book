@@ -1,5 +1,5 @@
 import React from "react";
-import "./NavBar.css";
+import "./NavBar.scss";
 import { Link } from "react-router-dom";
 
 let NavBar = ({ User }) => {

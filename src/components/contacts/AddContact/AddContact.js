@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./AddContact.css";
+import "./AddContact.scss";
 import { Link, useNavigate } from "react-router-dom";
 
 let AddContact = ({ addContact }) => {

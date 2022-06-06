@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./App.css";
+import "./App.scss";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
 import ContactList from "./components/contacts/ContactList/ContactList";
@@ -20,17 +20,9 @@ const [contacts, setContacts] = React.useState([
       firstName: "Patrick",
       lastName: "Star",
       company: "Apple",
-      phone: "262-893-4343",
+      numbers: [{type: "Work", number: "262-894-0630", isPrimary:""}, {type: "Mobile", number: "262-843-4343", isPrimary:""}]
     },
-    {
-      photo:
-        "https://upload.wikimedia.org/wikipedia/en/thumb/a/a0/Sandy_Cheeks.svg/1200px-Sandy_Cheeks.svg.png",
-      salutation: "Mrs",
-      firstName: "Sandy",
-      lastName: "Cheeks",
-      company: "Apple",
-      phone: "253-545-5454",
-    },
+    
   ]);
 
   const [user, setUser] = useState({ username: "", email: "", password: "" });
