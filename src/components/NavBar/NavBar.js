@@ -23,7 +23,7 @@ let NavBar = ({ User }) => {
         </div>
         <div className="navbar__item">
   
-          <Link to={"/settings"} className="plain">{settingsText}</Link>
+          <Link to={"/settings"} className="remove-link">{settingsText}</Link>
         </div>
         <div className="navbar__item"> {welcomeText} </div>
       </header>

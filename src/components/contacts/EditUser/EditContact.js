@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import "../../../_global.scss";
 
 let EditContact = ({User, editUser}) => {
 
@@ -31,13 +32,13 @@ let EditContact = ({User, editUser}) => {
                 sunt in culpa qui officia deserunt mollit anim id est laborum."
               </i>
             </p>
-            <button className="button button-warning">
-              <Link to={"/contactList"} className="standard-button">
+            <button className="button primary-button">
+              <Link to={"/contactList"} className="remove-link">
                 Cancel
               </Link>
             </button>
           </div>
-          <div className="styled-container-add">
+          <div className="styled-container">
           <form onSubmit={editSubmitHandler}>
       <div className="form-inner">
         <h2>Edit Contact</h2>

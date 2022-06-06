@@ -1,0 +1,57 @@
+@import "_variables.scss";
+
+
+form .form-inner {
+    position: relative;
+    display: block;
+    padding: 30px;
+    background-color: $white;
+    z-index: 2;
+  }
+  
+  form .form-inner h2 {
+    color: $form-typography;
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 30px;
+  }
+  
+  form .form-inner .form-group {
+  display:block;
+  width: 300px;
+  margin-bottom: 15px;
+  
+  }
+  
+  .form-inner .form-group label {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+  
+  .form-inner .form-group:focus-within label {
+    color: $primary-button;
+  }
+  
+  form .form-inner .form-group input {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    background-color: $input-color;
+    border-radius: 8px;
+    transition: 0.4s;
+  }
+  
+  
+  form .form-inner input[type="submit"] {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 8px;
+    background-color: $primary-color;
+    background-size: 200%;
+    background-position: 0%;
+    transition: 0.4s;
+    color: #FFF;
+    font-weight: 700;
+    cursor: pointer;
+  }

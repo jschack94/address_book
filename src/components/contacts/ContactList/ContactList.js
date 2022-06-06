@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./ContactList.scss";
+import "../../../_global.scss";
 import { Link } from "react-router-dom";
 
 let ContactList = ({Contacts, setContacts}) => {
@@ -35,7 +36,7 @@ let ContactList = ({Contacts, setContacts}) => {
                 sunt in culpa qui officia deserunt mollit anim id est laborum."
               </i>
             </p>
-            <button className="button button-warning">
+            <button className="button primary-button">
               <Link to={"/contact/new"} className="standard-button">
                 New
               </Link>

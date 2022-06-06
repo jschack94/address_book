@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import "./App.scss";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
-import ContactList from "./components/contacts/ContactList/ContactList";
+import ContactList from "./components/Contacts/ContactList/ContactList";
 import LoginForm from "./components/Login/LoginForm";
-import AddContact from "./components/contacts/AddContact/AddContact";
-import EditContact from "./components/contacts/EditContact/EditContact";
+import AddContact from "./components/Contacts/AddContact/AddContact";
+import EditContact from "./components/Contacts/EditUser/EditContact";
 
 
 

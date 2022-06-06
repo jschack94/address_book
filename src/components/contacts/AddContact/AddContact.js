@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./AddContact.scss";
+import "../../../_global.scss";
+
 import { Link, useNavigate } from "react-router-dom";
 
 let AddContact = ({addContact}) => {
@@ -47,8 +49,8 @@ let AddContact = ({addContact}) => {
                 sunt in culpa qui officia deserunt mollit anim id est laborum."
               </i>
             </p>
-            <button className="button button-warning">
-              <Link to={"/contactList"} className="standard-button">
+            <button className="button primary-button">
+              <Link to={"/contactList"} className="remove-link">
                 Cancel
               </Link>
             </button>

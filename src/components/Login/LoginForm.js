@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./LoginForm.scss";
+import "../../_globalForm.scss";
 
 
 function LoginForm({ Login }) {

@@ -1,90 +1,42 @@
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  padding: 10px;
-  text-decoration: none;
-}
-
-.grid-item {
-  padding: 20px;
-  text-decoration: none;
-  margin-top: 35px;
-}
-
-.add_button {
-  color: #fff;
-  background-color: #0069d9;
-  border-color: #0062cc;
-}
-
-.add_icon {
-  padding-right: 5px;
-}
-
-
 .button-view {
   color: #111;
   text-decoration: none;
   background-color: #ffc107;
-  border-color: #ffc107; 
+  border-color: #ffc107;
   width: 100%;
   margin: auto;
- 
 }
 
 .button-trash {
   color: #111;
   text-decoration: none;
-  border-color:red;
-  background-color:red;
+  border-color: red;
+  background-color: red;
   width: 100%;
   margin: auto;
   margin-top: 5px;
-
 }
 
 @media only screen and (min-width: 600px) {
-  .styled-card {display: none}
-  .mobile-button-view {display: none}
-
-
-
-  
+  .styled-card {
+    display: none;
+  }
+  .mobile-button-view {
+    display: none;
+  }
 }
-
 
 @media only screen and (max-width: 600px) {
-  .regular-view {display:none}
+  .regular-view {
+    display: none;
+  }
 }
 
-
-
-
-
-.styled-container {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  margin: auto;
-  max-width: 1400px;
-  padding: 20px;
-}
-
-.styled-card {
-  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 15px;
-  border-radius: 4px;
-  display: flex;
-  flex-flow: column wrap;
-  background-color: white;
-}
 
 .fit-picture {
   margin: auto;
   margin-bottom: 5px;
   width: 60%;
-
 }
 
 .red {
@@ -106,95 +58,18 @@ img {
   height: 30;
 }
 
-.view-button {
-  height: 25px;
-  text-align: center;
-  width: 145px;
-  color: #111;
-  background-color: blue;
-  border-color: blue;
-  font-size: 1.3rem;
-  letter-spacing: 0.035em;
-  font-weight: 200;
-  border-radius: 6px;
-  cursor: pointer;
-  text-decoration: none;
-  margin-left: 5px;
-}
 
-.new-button {
-  height: 25px;
-  text-align: center;
-  width: 145px;
-  background-color: #e0a800;
-  border-color: #d39e00;
-  color: white;
-  font-size: 1.3rem;
-  letter-spacing: 0.035em;
-  font-weight: 200;
-  border-radius: 6px;
-  cursor: pointer;
-  text-decoration: none;
-  margin-left: 5px;
-}
-
-.Add-Button {
-  min-width: 100px;
-  padding: 16px 32px;
-  border-radius: 4px;
-  border: none;
-  background: #141414;
-  color: #fff;
-  font-size: 24px;
-  cursor: pointer;
-
-}
 
 .new-section {
   padding-top: 15px;
   margin-bottom: -25px;
 }
 
-.edit-button {
-  height: 25px;
-  text-align: center;
-  width: 145px;
-  color: #111;
-  background-color: #e0a800;
-  border-color: #d39e00;
-  font-size: 1.3rem;
-  letter-spacing: 0.035em;
-  font-weight: 200;
-  border-radius: 6px;
-  cursor: pointer;
-  text-decoration: none;
-  margin-left: 5px;
-}
-.trash-button {
-  height: 25px;
-  text-align: center;
-  width: 145px;
-  color: #111;
-  background-color: red;
-  border-color: red;
-  font-size: 1.3rem;
-  letter-spacing: 0.035em;
-  font-weight: 200;
-  border-radius: 6px;
-  cursor: pointer;
-  text-decoration: none;
-  margin-left: 5px;
-}
 
 .group-buttons {
   display: flex;
   justify-content: center;
   width: 100%;
-}
-
-.button {
-  text-decoration: none;
-  color: white;
 }
 
 .list-group {
