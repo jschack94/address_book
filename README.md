@@ -1,71 +1,52 @@
-# Getting Started with Create React App
+# Welcome! 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Thank you for visiting my Address application. Please feel free to click around and explore. If you do come across any questions on functionality or personal decisions made, I would be more than happy to make myself available for a follow up call.
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+# Checklist 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Build and implement a component library for a responsive address book webapp.X
+2. Use your favorite CSS preprocessor. X (Utilized SCSS. Please let me know if you have any questions for me on the way I utilized SCSS) X
+3. Account for proper form validation to be displayed (Basic required methods have been applied to all forms)  X
+4. The application should have five main views
+a. Login View X
+i. Display a login modal on page load (a refresh wipes all data) X (Please start at http://localhost:3000 to access the login page )
+ii. There is no backend, allow any username/password, require both to be populated X
+iii. Username: save input to display in the header after “login” (required field) X
+iv. Password: require at least one character (required field) X
+v. Submitting the modal shows the Contact List View X
+b. Contact List View X
+i. Shows upon successful “login” X
+ii. This view appears on screen along with the Contact Details View at desktop widths X
+iii. This view appears by itself at mobile widths (Clicking on the eye icon on the mobile viewport will activate this!! Please let me know if you have any trouble getting to this view)
+iv. Has an empty state when there are no contacts X
+v. Has a button to create a new contact X
+vi. Contact's phone can be work, cell, or home. Color-code each number by its type using
+three colors of your choice. One color for each type of phone number. X
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+c. Contact Details View
+i. This view appears on screen along with the Contact List View at desktop widths X
+ii. This view appears by itself at mobile widths X
+iii. Has an empty state when no contact is selected X
+d. Create Contact View
+i. This is a modal view similar to the Login View containing: (Clicking on the new button at athe top of the Contact List page will get you to the create page) X
+ii. Contact Photo X
+iii. Salutation X
+iv. First and Last Name (required fields) X
+v. Company Name X
+vi. Phone number (required field), Type of number (work, cell, home) (required field) X
 
-### `npm test`
+1. Allow for adding as many phone numbers as the customer needs X
+2. Allow for setting one of the phone numbers as “primary” X
+vii. A button to remove the contact X
+e. User Settings View
+i. A modal allowing the user to change username X
+ii. Prefilled the input with the current username X
+iii. Allow the modal to be cancelled X
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# address_book
+5. Header
+a. Should be fixed to the top of the viewport X
+b. Displays the username (from login input) X
+c. Links to the User Settings View X
+6. Upload your solution to a public repository on github, gitlab, or other source control repo.
