@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import "./ContactList.scss";
-import "../../../_global.scss";
 import { Link } from "react-router-dom";
-
+import { FaStar } from "react-icons/fa";
 let ContactList = ({ Contacts, setContacts }) => {
   const [isActive, setActive] = useState("false");
 
@@ -34,8 +33,8 @@ let ContactList = ({ Contacts, setContacts }) => {
                 sunt in culpa qui officia deserunt mollit anim id est laborum."
               </i>
             </p>
-            <button className="button primary-button">
-              <Link to={"/contact/new"} className="remove-link">
+            <button className="button button-warning">
+              <Link to={"/contact/new"} className="standard-button">
                 New
               </Link>
             </button>
@@ -46,7 +45,7 @@ let ContactList = ({ Contacts, setContacts }) => {
         <div className="styled-container">
           {Contacts.map((contact, index) => {
             return (
-              <div className="styled-card" key={contact.id} index={index}>
+              <div className="styled-card" key={index} index={index}>
                 <img
                   src={contact.photo}
                   class="fit-picture"
@@ -85,7 +84,7 @@ let ContactList = ({ Contacts, setContacts }) => {
                     </li>
                   </ul>
 
-                  {contact.numbers.map((number) => {
+                  {contact.numbers.map((number, index) => {
                     return (
                       <ul className="list-group">
                         <div className={number.type === "Home" ? "green" : ""}>
@@ -95,8 +94,19 @@ let ContactList = ({ Contacts, setContacts }) => {
                             <div
                               className={number.type === "Work" ? "red" : ""}
                             >
-                              <p>{number.type}:</p>
-                              <p>{number.number}</p>
+                              {index === 0 ? (
+                                <>
+                                  <p>
+                                    {number.type}: <FaStar color={"orange"} />
+                                  </p>
+                                  <p>{number.number}</p>
+                                </>
+                              ) : (
+                                <>
+                                  <p>{number.type}:</p>
+                                  <p>{number.number}</p>
+                                </>
+                              )}
                             </div>
                           </div>
                         </div>
@@ -106,14 +116,22 @@ let ContactList = ({ Contacts, setContacts }) => {
                 </div>
                 <div className="mobile-button-view">
                   <button className="button button-view" onClick={handleToggle}>
-                    <i class="add-color fa fa-eye fa-1x"></i>
+                    <Link
+                      to="/contact/view"
+                      state={{ contact: contact, index: index }}
+                      className="standard-button"
+                    >
+                      <i class="fa fa-eye fa-1x"></i>
+                    </Link>
                   </button>
                 </div>
                 <button
                   className="button button-trash"
                   onClick={() => removeAddress(index)}
                 >
-                  <i class="add-color fa fa-trash fa-1x"></i>
+                  <Link to={"/contactList"} className="standard-button">
+                    <i class="fa fa-trash fa-1x"></i>
+                  </Link>
                 </button>
               </div>
             );
