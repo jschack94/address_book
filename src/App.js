@@ -17,7 +17,7 @@ let App = () => {
 const [contacts, setContacts] = React.useState([
    
     {
-      id: 1,
+      
       photo:
         "https://upload.wikimedia.org/wikipedia/en/thumb/3/33/Patrick_Star.svg/1200px-Patrick_Star.svg.png",
       salutation: "Mr",
@@ -27,7 +27,7 @@ const [contacts, setContacts] = React.useState([
       numbers: [{type: "Home", number: "262-894-0630", isPrimary:""},{type: "Work", number: "262-894-0630", isPrimary:""}, {type: "Mobile", number: "262-843-4343", isPrimary:""}]
     },
     {
-      id: 2,
+      
       photo:
         "https://upload.wikimedia.org/wikipedia/en/thumb/a/a0/Sandy_Cheeks.svg/1200px-Sandy_Cheeks.svg.png",
       salutation: "Mrs",

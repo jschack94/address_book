@@ -126,8 +126,9 @@ let AddContact = ({ addContact }) => {
                     name="photo"
                     id="photo"
                     onChange={handleInputChange}
+                    placeholder="Enter Image URL"
                     value={contact.photo}
-                    required
+                    
                   />
                 </div>
                 <div className="form-group">
@@ -138,7 +139,7 @@ let AddContact = ({ addContact }) => {
                     id="salutation"
                     onChange={handleInputChange}
                     value={contact.salutation}
-                    required
+                    
                   />
                 </div>
                 <div className="form-group">
@@ -171,7 +172,7 @@ let AddContact = ({ addContact }) => {
                     id="company"
                     onChange={handleInputChange}
                     value={contact.company}
-                    required
+                    
                   />
                 </div>
 

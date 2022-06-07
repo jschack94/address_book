@@ -44,10 +44,11 @@ let ContactList = ({ Contacts, setContacts }) => {
           {Contacts.map((contact, index) => {
             return (
               <div className="styled-card" key={index} index={index}>
+                {}
                 <img
-                  src={contact.photo}
+                  src={contact.photo.includes(".com") || contact.photo.includes(".org") ? contact.photo : "https://cdn-icons-png.flaticon.com/512/149/149071.png"}
                   class="fit-picture"
-                  alt="Contact Photo"
+                  alt={contact.photo} 
                 ></img>
                 <div className="mobile-list-view">
                   <ul className="list-group">
