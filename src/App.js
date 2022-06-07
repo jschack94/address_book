@@ -6,6 +6,8 @@ import ContactList from "./components/Contacts/ContactList/ContactList";
 import LoginForm from "./components/Login/LoginForm";
 import AddContact from "./components/Contacts/AddContact/AddContact";
 import EditContact from "./components/Contacts/EditUser/EditContact";
+import View from "./components/Contacts/ContactList/View";
+
 
 
 
@@ -82,6 +84,7 @@ const [contacts, setContacts] = React.useState([
       <NavBar User={user} />
       <Routes>
         <Route path="/contact/new" element={<AddContact addContact={addContact} />} />
+        <Route path="/contact/view" element={<View />} />
         <Route path="/contactList" element={<ContactList Contacts={contacts} setContacts={setContacts} />} />
         <Route path="/settings" element={<EditContact User={user} editUser={editUser} />} />
 

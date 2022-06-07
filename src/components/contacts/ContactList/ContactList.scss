@@ -1,24 +1,23 @@
+@import "../../../variables";
+
+
 .button-view {
-  color: #111;
+  color: $secondary-color;
   text-decoration: none;
-  background-color: #ffc107;
-  border-color: #ffc107;
+  background-color: $primary-color;
+  border-color: $primary-color;
   width: 100%;
   margin: auto;
 }
 
 .button-trash {
-  color: #111;
+  color:  $secondary-color;
   text-decoration: none;
-  border-color: red;
-  background-color: red;
+  border-color: $trash-color;
+  background-color: $trash-color;
   width: 100%;
   margin: auto;
   margin-top: 5px;
-}
-
-.add-color {
-  color: white;
 }
 
 @media only screen and (min-width: 600px) {
@@ -43,6 +42,10 @@
   width: 60%;
 }
 
+.white {
+  color: $white;
+}
+
 .red {
   color: red;
 }
@@ -62,23 +65,11 @@ img {
   height: 30;
 }
 
-.new-section {
-  padding-top: 15px;
-  margin-bottom: -25px;
-}
-
-
-.group-buttons {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
 .list-group {
   margin-bottom: 20px;
   padding-left: 0;
   border-radius: 4px;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075);
+  -webkit-box-shadow: 0 1px 2px $secondary-color;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075);
 }
 

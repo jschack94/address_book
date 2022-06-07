@@ -1,3 +1,6 @@
+@import "../../../variables";
+
+
 .grid-container-create {
   padding: 10px;
   text-decoration: none;
@@ -26,6 +29,11 @@ input {
 
 .icon {
   margin: auto;
-  width: 15%;
+  width: 25%;
   display: flex;
+  margin-bottom: 10px;
+}
+
+.add-button {
+  color: $secondary-color;
 }

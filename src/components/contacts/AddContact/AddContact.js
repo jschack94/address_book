@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./AddContact.scss";
 import { Link, useNavigate } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
+import "../../../_global.scss";
+import "../../../_globalForm.scss";
 
 const Input = ({ handleInputChange, phoneIndex }) => {
   return (
@@ -102,8 +104,8 @@ let AddContact = ({ addContact }) => {
                 sunt in culpa qui officia deserunt mollit anim id est laborum."
               </i>
             </p>
-            <button className="button button-warning">
-              <Link to={"/contactList"} className="standard-button">
+            <button className="button primary-button">
+              <Link to={"/contactList"} className="remove-link">
                 Cancel
               </Link>
             </button>
@@ -199,7 +201,7 @@ let AddContact = ({ addContact }) => {
                   </select>
                 </div>
                 {inputList}
-                <button className="button addButton" onClick={onAddBtnClick}>
+                <button className="button add-button" onClick={onAddBtnClick}>
                   Add phone number <span>+</span>
                 </button>
 

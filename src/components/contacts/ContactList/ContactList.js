@@ -2,12 +2,10 @@ import React, { useState } from "react";
 import "./ContactList.scss";
 import { Link } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
-let ContactList = ({ Contacts, setContacts }) => {
-  const [isActive, setActive] = useState("false");
+import "../../../_global.scss";
 
-  const handleToggle = () => {
-    setActive(!isActive);
-  };
+let ContactList = ({ Contacts, setContacts }) => {
+
 
   const removeAddress = (index) => {
     const newAddresses = [...Contacts];
@@ -33,8 +31,8 @@ let ContactList = ({ Contacts, setContacts }) => {
                 sunt in culpa qui officia deserunt mollit anim id est laborum."
               </i>
             </p>
-            <button className="button button-warning">
-              <Link to={"/contact/new"} className="standard-button">
+            <button className="button primary-button">
+              <Link to={"/contact/new"} className="remove-link">
                 New
               </Link>
             </button>
@@ -74,7 +72,7 @@ let ContactList = ({ Contacts, setContacts }) => {
                   </ul>
                 </div>
 
-                <div className={isActive ? "regular-view" : null}>
+                <div>
                   <ul className="list-group">
                     <li className="list-group-item list-group-item-action">
                       Company:
@@ -115,13 +113,13 @@ let ContactList = ({ Contacts, setContacts }) => {
                   })}
                 </div>
                 <div className="mobile-button-view">
-                  <button className="button button-view" onClick={handleToggle}>
+                  <button className="button button-view">
                     <Link
                       to="/contact/view"
                       state={{ contact: contact, index: index }}
                       className="standard-button"
                     >
-                      <i class="fa fa-eye fa-1x"></i>
+                      <i class="white fa fa-eye fa-1x"></i>
                     </Link>
                   </button>
                 </div>
@@ -130,7 +128,7 @@ let ContactList = ({ Contacts, setContacts }) => {
                   onClick={() => removeAddress(index)}
                 >
                   <Link to={"/contactList"} className="standard-button">
-                    <i class="fa fa-trash fa-1x"></i>
+                    <i class="white fa fa-trash fa-1x"></i>
                   </Link>
                 </button>
               </div>
