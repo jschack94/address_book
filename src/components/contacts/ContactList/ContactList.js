@@ -46,7 +46,7 @@ let ContactList = ({ Contacts, setContacts }) => {
               <div className="styled-card" key={index} index={index}>
                 {}
                 <img
-                  src={contact.photo.includes(".com") || contact.photo.includes(".org") ? contact.photo : "https://cdn-icons-png.flaticon.com/512/149/149071.png"}
+                  src={contact.photo.includes(".com") || contact.photo.includes(".net") || contact.photo.includes(".org") ? contact.photo : "https://cdn-icons-png.flaticon.com/512/149/149071.png"}
                   class="fit-picture"
                   alt={contact.photo} 
                 ></img>
