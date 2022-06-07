@@ -73,7 +73,7 @@ let EditContact = ({User, editUser}) => {
             type="password"
             name="password"
             id="password"
-            placeholder={User.email}
+            placeholder={User.password}
             required
             onChange={(e) =>
               setEditDetails({ ...editDetails, password: e.target.value })
